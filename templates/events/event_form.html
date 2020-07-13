@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+ 
+{% block title %}Dashboard{% endblock %}
+ 
+{% block content %}
+
+<div class='form'>
+  <form method='post'>
+  	{{form.as_p}}
+  	{% csrf_token %}
+  	<input type="submit" name="event">
+  </form>
+</div>
+
+
+{% endblock %}

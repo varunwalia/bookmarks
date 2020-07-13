@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+ 
+{% block title %}Dashboard{% endblock %}
+ 
+{% block content %}
+  <h1>Dashboard</h1>
+  <p>Welcome to your dashboard.</p>
+  
+  <ul>
+
+    <div class="container">
+      <div class='row'>
+        <div class='col-10'>
+              {{ calender }}
+        </div>
+        <div class="col-2">
+          <h1> My events -- <p style='color:#007bff;'> ** </p> </h1>
+          <h1> Invitations -- <p style='color:#d90d0d;'> ** </p> </h1>
+  <!--           <h1> My Events. </h1>
+            <ul>
+              {% for event in events %}
+                <li> <a href="{{event.get_absolute_url}}">{{event.title}} </a> </li>
+              {% endfor %}
+              </ul>
+              <h1> Invitations </h1>
+                 <ul class="invites">
+                {% for event in invites %}
+                  <li class="invites"> <a href="{{event.invited_to.get_absolute_url}}">{{event.invited_to.title}} </a> </li>
+                {% endfor %}
+                </ul> -->
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+{% endblock %}

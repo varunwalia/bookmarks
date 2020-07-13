@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+ 
+{% block title %}Dashboard{% endblock %}
+ 
+{% block content %}
+  <h1>{{event.title}}</h1>
+<br/>
+
+	{% if request.user == event.user %}
+	{% if flag %}
+    <ul class="messages">
+    	<h3>Sorry! You have already sent 10 invites. </h3>
+    </ul>
+  {% else %}
+
+	<h2> Send out the invites to your friends for this upcoming event </h2>
+	    <br/>
+	    <form action='.' method='post'>
+	  	{{form.as_p}}
+	  	{% csrf_token %}
+	  	<input type="submit" name="event" label='Friends'>
+	  </form>
+
+	  {% endif %}
+  {% endif %}
+<hr>
+  <div class="container">
+  	<h4>
+	Description: {{event.description}}
+</h4>
+  </div>
+
+{% endblock %}
