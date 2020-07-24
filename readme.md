@@ -1,4 +1,4 @@
-# One can mark their important events on the calender provided in this app. It also gives the flexxibilty of inviting other users to your event.
+### One can mark their important events on the calender provided in this app. It also gives the flexxibilty of inviting other users to your event.
 
 Steps to get started :
 
